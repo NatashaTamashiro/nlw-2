@@ -1,0 +1,105 @@
+#page-create-point{
+    width: 90%;                             /* Para limitar o tamanho da caixa na página*/
+    max-width: 1100px;                      /* Definindo largura máxima, quando chegar em 1100px, ele para de ajustar a página */
+    margin: 0 auto;                         /* Alinhar igualmente nas laterais */
+}
+
+#page-create-point header {
+    display: flex;                          /* Para deixar o conteúdo um do lado do outro */
+    justify-content: space-between;         /* Dar um espaço entre eles */
+    align-items: center;                    /* Centralizar o conteúdo */
+    margin-top: 48px;                       /* Dar um espaçamento em cima do conteúdo */
+}
+
+#page-create-point header a{
+    color: var(--tittle-color);             /* Cor vindo do root (main.css) */
+    font-weight: bold;                      /* Peso/Grossura da fonte*/
+    display: flex;                          /* Para que a seta do icone fique ao lado do link */
+    align-items: center;                    /* Alinhar o ícone com o link */
+}
+
+#page-create-point header a span{
+    background-image: url('../assets/arrow-left.svg');
+    width: 20px;                            /* Definir o tamanho do ícone para ele aparecer */
+    height: 20px;
+    display: flex;
+    margin-right: 15px;                     /* Distância o ícone */
+}
+
+form{
+    background-color: #ffffff;
+    padding: 64px;                          /* Preenchimento interno da caixa*/
+    border-radius: 8px;
+    max-width: 730px;
+    margin: 80px auto;                      /* Alinhar igualmente nas laterais (pelo lado de fora) e dar uma distancia de 80px no Top e no Bottom */
+}
+
+form h1{
+    font-size: 36px;
+}
+
+form fieldset{
+    margin-top: 64px;
+    border: 0;
+}
+
+form legend{
+    margin-bottom: 40px;
+}
+
+form legend h2{
+    font-size: 24px;
+}
+
+form .field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    flex: 1;                                /* Para que o conteúdo se estiquem e ocupem todo espaço */
+}
+
+form .field-group{
+    display: flex;
+}
+
+form input,
+form select {
+    background-color: #f0f0f5;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    /*outline: none;*/                      /* Fica um contorno preto no input */
+}
+
+form select {                               /* Rezetar o padrão dos campos do Browser/Navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + .field{          /* Vou pegar um fiel seguido de outro field (que são os campos de endereço e número */
+    margin-left: 24px;
+}
+
+form button{
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;                         /* As cores podem ser tanto Hexadecimal (#) quanto escrita! */
+    font-weight: bold;                      /* Ou 700 (negrito/peso/grossura) */
+    font-size: 16px;
+    border: 0;                              /* Para remover a borda */
+    margin-top: 40px;
+    transition: background-color 400ms;     /* Tempo que irá ocorrer a transição que esta recebendo (Nesse caso, o Hover) */    
+}                                               /* OBS.: A transição tem vários tipos, nesse contexto estamos aplicando apenas para o backgraound do botão */
+
+form button:hover{                          /* Quando passar o mouse em cima, vai seguir as seguintes regras */
+    background-color: #2fb86e;            /* A cor do background(fundo) ficará com uma cor diferente (Apenas quando passar o mouse em cima!) */
+}

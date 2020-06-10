@@ -1,0 +1,111 @@
+/* 
+BOX MODEL - modelo de caixa - exibição de caixa
+    Tipos de DISPLAY
+        BLOCK - Ocupa toda a linha da tela
+        INLINE - ocupa somente seu próprio tamanho (ex. a href )
+
+    Toda caixa tem: largura, altura, espaçamentos, preenchimentos
+    bordas, cor, fundo, alinhamentos, posicionamentos(Maneira que é vista pelo html)
+*/
+
+
+#page-home{
+    background: url('../assets/home-background.svg') no-repeat;
+    height: 100vh;                          /* Dar o tamanho necessário para a página*/
+    background-position: 35vw bottom;       /* Ajustar na posição do eixo X e Y */
+}
+
+#page-home header{
+    margin-top: 48px;                       /* Colocando um espaçamento em cima do conteúdo */
+    display: flex;                          /* Para ficarem um ao lado do outro*/
+    align-items: center;                    /* Alinhar os itens ao centro */
+    justify-content: space-between;         /* Justificar o conteúdo de dentro, justificando o espaço entre eles*/
+}
+
+#page-home .content{
+    width: 90%;                             /* Para limitar o tamanho da caixa na página*/
+    max-width: 1100px;                      /* Definindo largura máxima, quando chegar em 1100px, ele para de ajustar a página */
+    margin: 0 auto;                         /* Alinhar igualmente nas laterais */
+    height: 100%;
+    display: flex;                          /* Para deixar os conteúdos ao lado do outro */
+    flex-direction: column;                 /* Direcionar como coluna */
+}
+/* 
+MARGIN - PROPRIEDADES
+    1 valor de propriedade - margin: auto;                      Aplica para os 4 cantos automaticamente;
+    2 valores de propriedades - margin: 0 auto;                 0 = Top e Bottom || auto = Left e Right;
+    3 valores de propriedades - margin: 10px auto 15px          10 = Top || auto = Left e Right || 15 = Bottom
+    4 valores de propriedades - margin: 10px auto 15px 20px     10 = Top || auto = Right || 15 = Bottom || 20 = Left
+*/
+
+#page-home header a {
+    display: flex;                          /* Elemento um ao lado do outros*/
+    color: var(--title-color);              /* Cor da fonte - Variavel usado do root  (arquivo main.css) */
+    font-weight: 700;                       /* Peso da fonte, negrito */
+}
+
+#page-home header a span {
+    background-image: url('../assets/log-in.svg');
+    width: 20px;
+    height: 20px;
+    display: flex;
+    margin-right: 15px;                     /* Dando um espaço entre o ícone e a escrita */
+}
+
+#page-home main{
+    max-width: 560px;
+    flex: 1;                                /* Preenche automaticamente todo o espaço em branco que ele tiver */
+    display: flex;                          /* Para deixar os conteúdos ao lado do outro */
+    flex-direction: column;                 /* Direcionar como coluna */
+    justify-content: center;                /* Vai pegar o conteúdo da MAIN que tem o tamanho 600 e centralizar entre o TOP e o BOTTOM (eixo Y ) */
+}
+
+#page-home main h1{
+    font-size: 54px;                        /* Tamanho da fonte */
+}
+
+#page-home main p{
+    font-size: 24px;                        /* Mudando o tamanho da fonte */
+    line-height: 38px;                      /* Altura da linha do texto */
+    margin-top: 24px;
+}
+
+#page-home main a{
+    width: 100%;                            /* Largura do botão */
+    max-width: 360px;                       /* Maxima largura dele */
+    height: 72px;                           /* Tamanho da altura do botão */
+    background-color: var(--primary-color); /* Variavel usada do :root */
+    border-radius: 8px;                     /* Arredondamento das bordas */
+    display: flex;                          /* Para deixar os conteúdos ao lado do outro */
+    align-items: center;                    /* Centralizar o conteúdo */
+    margin-top: 40px;                       /* Margem para dar uma distancia do conteúdo de cima*/
+    transition: 400ms;                      /* Tempo que irá ocorrer a transição que esta recebendo (Nesse caso, o Hover) */
+    color: white;                         /* Cor da fonte */
+}
+
+#page-home main a:hover{
+    background-color: #2fb86e;            /* Mudar a cor do botão quando passar o mouse em cima */
+}
+
+#page-home main a span{
+    width: 72px;
+    height: 72px;
+    background-color: rgba(0, 0, 0, 0.08);/* Alpha = Transparência */
+    border-top-left-radius:8px;             /* Removendo o detalhe que tinha do border-radius*/
+    border-bottom-left-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-home main a span::after {             /* Pseudoelemento */
+    content: "";                            /* Apenas para dizer que tem um conteúdo - que sera colocado uma imagem de fundo */
+    background-image: url('../assets/search.svg');
+    width: 20px;
+    height: 20px;
+}
+
+#page-home main a strong{       
+    flex: 1;                                /* Preenche automaticamente todo o espaço em branco que ele tiver */
+    text-align: center;                     /* Alinhar o texto ao centro */
+}

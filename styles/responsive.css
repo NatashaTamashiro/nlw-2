@@ -1,0 +1,35 @@
+/* conjunto de regras para configurações / responsividade */
+
+@media (max-width: 900px) {                  /* Quando eu diminuit a tela para menor que 900 px, irá aplicar as seguintes regras: */
+    #page-home{
+        background-position-x: 70vw;        /* Jogar a imagem para fora para não aparecer mais */
+    }
+
+    #page-home .content {                   /* Centralizar o conteúdo */
+        align-items: center;
+        text-align: center;
+    }
+
+    #page-home header a{
+        position: absolute;                 /* Cria um conteúdo em cima do outro, como se fosse um tijolo em cima de outro */
+        bottom: 48px;                       /* Vai pegar minha página inteira, e dessa página, em baixo, vai dar o espaçamento desejado */
+        left: 50%;                          /* Para por o conteúdo exatamente no meio da página */
+        transform: translateX(-50%);        /* Para achar o ponto médio e deixar centralizado */
+    }
+
+    #page-home main{
+        align-items: center;
+    }
+}
+
+@media (min-width:1700px){                  /* Quando a largura mínima for de 1700 (ou seja, de 1700 PRA CIMA), iremos aplicar as seguintes regras */
+    #page-home{
+        background-position-x: 40vw;        /* Ajustar a imagem para que os conteúdos não fiquem em cima ( Para telas grandes!) - Eixo X (largura) */
+    }
+}
+
+@media (max-height:760px){                  /* Altura máxima permitida */
+    #page-home{
+        background-position-y: 200px;        /* Ajustar a imagem - Eixo Y (altura) - Quando a página estiver menor que o max-height, a imagem fica estática */
+    }
+}
